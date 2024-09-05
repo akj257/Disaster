@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Disaster Management</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            height: 100vh;
+            color: #000; /* Jet black color for body text */
+            overflow-y: auto;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        /* Scrollable content container */
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            transform: scale(0);
+            animation: zoomIn 0.8s forwards;
+        }
+
+        /* Heading style */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #000; /* Jet black for the heading */
+            text-transform: uppercase;
+            animation: fadeIn 1s ease-in-out;
+            letter-spacing: 2px; /* Add space between letters */
+        }
+
+        /* Image styling */
+        .image-section {
+            margin: 20px 0;
+        }
+
+        .responsive-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            width: 80%; /* Adjust width to control the size */
+            max-height: 400px; /* Limit the max height to prevent excessive space */
+            border: 2px solid #000; /* Jet black border */
+            border-radius: 10px;
+            margin: 0 auto; /* Centering the image */
+            transform: scale(0);
+            animation: imageZoom 1.5s ease-in-out forwards;
+        }
+
+        /* Paragraph styling */
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-top: 20px;
+            color: #000; /* Jet black for paragraph text */
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards 0.5s;
+        }
+
+        /* Animations */
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes imageZoom {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+
+            .responsive-image {
+                width: 90%;
+                max-height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .responsive-image {
+                width: 95%;
+                max-height: 250px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- About Us Section -->
+    <div class="container">
+        <h1>About Us</h1>
+
+        <!-- Image Section -->
+        <div class="image-section">
+            <img src="https://www.shutterstock.com/image-vector/disaster-management-cycle-infographic-illustrate-600nw-1829643653.jpg" alt="Disaster Management Cycle" class="responsive-image">
+        </div>
+
+        <!-- Paragraph Content -->
+        <p>
+            At DisasterRelief, we specialize in disaster preparedness, response, recovery, and mitigation. Our mission is to empower communities with knowledge and resources to tackle disasters head-on.
+        </p>
+        <p>
+            With a team of experts in the field, we work hand-in-hand with local and international organizations to reduce the impact of disasters and ensure a safer future for everyone.
+        </p>
+    </div>
+
+</body>
+</html>
